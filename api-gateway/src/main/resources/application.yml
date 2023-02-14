@@ -1,7 +1,7 @@
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://34.211.140.211:8761/eureka
+            defaultZone: http://ac8ee4a5896b449858abcdd0b008fa5f-1776643311.us-west-1.elb.amazonaws.com:8761/eureka
             
 server:
     port: 2022
