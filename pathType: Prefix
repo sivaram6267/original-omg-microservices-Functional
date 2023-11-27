@@ -1,0 +1,8 @@
+-------------------------------------------omg-microservices\api-gateway\src\main\java\com\example\demo------------------------------------------------------------------------------------------
+
+
+.path("/api/sendOtp", "/api/login", "/api/user/register", "/user/myProfile", "/user/myProfile/",
+                        "/user/addAddress")
+                .filters(f -> f.filter(authenticationFilter)
+                        .circuitBreaker(c -> c.setName("custom").setFallbackUri("/fallback/testService")))
+                .uri("lb://OMG-PROFILE-SERVICE");
